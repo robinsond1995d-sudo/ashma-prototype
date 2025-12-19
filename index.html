@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>ASHMA 3D</title>
+<style>
+html,body{margin:0;overflow:hidden;background:#000}
+canvas{display:block}
+#joy{
+ position:fixed;left:20px;bottom:20px;
+ width:120px;height:120px;
+ border-radius:50%;
+ background:rgba(255,255,255,0.05);
+ touch-action:none;
+ z-index: 100; /* Ensure joystick is above canvas */
+}
+#dot{
+ position:absolute;
+ width:40px;height:40px;
+ left:40px;top:40px;
+ border-radius:50%;
+ background:rgba(255,90,30,0.6);
+}
+</style>
+</head>
+<body>
+
+<div id="joy"><div id="dot"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
