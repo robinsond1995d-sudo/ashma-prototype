@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ASHMA: Wrath of Persia — Build 2</title>
+
+  <!-- Mobile Lock -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+      touch-action: none;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    /* ===================
+       LEFT JOYSTICK
+    =================== */
+    #joystick {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      touch-action: none;
+    }
+
+    #stick {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 14px rgba(255,255,255,0.8);
+    }
+
+    /* ===================
+       RIGHT LOOK AREA
+    =================== */
+    #look-area {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 55vw;
+      height: 100vh;
+      z-index: 9;
+      touch-action: none;
+    }
+  </style>
+
+  <!-- ✅ Three.js NON-MODULE (GitHub Pages Safe) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.1/three.min.js"></script>
+</head>
+
+<body>
+
+  <div id="joystick">
+    <div id="stick"></div>
+  </div>
+  <div id="look-area"></div>
+
+  <!-- ✅ Main Game -->
+  <script src="game.js"></script>
+
+</body>
+</html>
